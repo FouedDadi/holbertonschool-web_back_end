@@ -7,10 +7,10 @@ def safe_first_element(lst: Sequence[Any]) -> Union[Any, None]:
     """[Duck-type]
 
     Args:
-        lst (Sequence[any]): [argument 1 of any]
+        lst (Sequence[any]): [argument 1 of Any]
 
     Returns:
-        Union[any, None]: [any or none]
+        Union[any, None]: [Any or None]
     """
     if lst:
         return lst[0]
