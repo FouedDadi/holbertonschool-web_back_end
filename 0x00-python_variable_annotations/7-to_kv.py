@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""[]"""
+"""[takes an str k and int/float v and return the k and square of v]"""
 from typing import List, Union, Tuple
 
 
 def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
-    """[summary]
+    """[type-annotated function]
 
     Args:
         k (str): [argument as string]
