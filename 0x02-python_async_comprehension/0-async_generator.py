@@ -11,6 +11,7 @@ async def async_generator() -> Generator[float, None, None]:
     Yields:
         Generator[float, None, None]: []
     """
-    for _ in range(10):
+    for value in range(10):
         await asyncio.sleep(1)
-        yield random.random() * 10
+        value = random.random() * 10
+        yield value
