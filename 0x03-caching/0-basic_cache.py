@@ -10,7 +10,7 @@ class BasicCache(BaseCaching):
         BaseCaching ([type]): [description]
     """
     def put(self, key, item):
-        """[put]
+        """[put method]
 
         Args:
             key ([type]): [description]
@@ -22,7 +22,7 @@ class BasicCache(BaseCaching):
             self.cache_data[key] = item
 
     def get(self, key):
-        """[get]
+        """[get method]
 
         Args:
             key ([type]): [description]
