@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""[]"""
+"""[method get_page that takes two integer arguments page and page_size]"""
 import csv
 import math
 from typing import List, Tuple
@@ -39,9 +39,11 @@ class Server:
         assert page_size > 0
         assert page > 0
         start_idx, end_idx = index_range(page, page_size)
+        total = []
         if start_idx >= len(self.dataset()):
-            return []
+            return total
         else:
+            total = self.dataset()
             return self.dataset()[start_idx:end_idx]
 
 
