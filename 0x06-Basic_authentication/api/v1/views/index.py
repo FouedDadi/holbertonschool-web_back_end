@@ -29,7 +29,7 @@ def stats() -> str:
 @app_views.route('/unauthorized', methods=['GET'], strict_slashes=False)
 def not_auth() -> str:
     """[summary]
-    
+
     Returns:
         str: [description]
     """
@@ -39,7 +39,7 @@ def not_auth() -> str:
 @app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
 def forbidden() -> str:
     """[summary]
-    
+
     Returns:
         str: [description]
     """
