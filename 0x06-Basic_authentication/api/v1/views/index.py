@@ -27,8 +27,8 @@ def stats() -> str:
 
 
 @app_views.route('/unauthorized', methods=['GET'], strict_slashes=False)
-def not_auth() -> str:
-    """[summary]
+def unauthorized() -> str:
+    """[error handler tester]
 
     Returns:
         str: [description]
@@ -38,7 +38,7 @@ def not_auth() -> str:
 
 @app_views.route('/forbidden', methods=['GET'], strict_slashes=False)
 def forbidden() -> str:
-    """[summary]
+    """[error handler tester]
 
     Returns:
         str: [description]
