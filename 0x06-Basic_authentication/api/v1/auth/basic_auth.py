@@ -91,7 +91,7 @@ class BasicAuth(Auth):
         except Exception:
             return None
         for pair in credentials:
-            if pair.is_valid_password(user_pwd):
-                return pair
-            else:
+            if not pair.is_valid_password(user_pwd):
                 return None
+            else:
+                return pair
