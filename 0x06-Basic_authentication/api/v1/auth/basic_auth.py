@@ -50,5 +50,5 @@ class BasicAuth(Auth):
             decoded = base64.b64decode(encoded)
             value = decoded.decode('utf-8')
             return value
-        except Exception():
+        except Exception:
             return None
