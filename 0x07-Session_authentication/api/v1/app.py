@@ -58,12 +58,11 @@ def before_a_request():
             return
         if auth.current_user(request) is None:
             abort(403)
-        request.current_user = auth.current_user(request)
         if auth.authorization_header(request) and auth.session_cookie(request):
             return None
         else:
             abort(401)
-
+        request.current_user = auth.current_user(request)
 
 if __name__ == "__main__":
     host = getenv("API_HOST", "0.0.0.0")
