@@ -64,8 +64,7 @@ class SessionAuth(Auth):
         cook = self.session_cookie(request)
         if not cook:
             return False
-        usr_id = self.user_id_by_session_id(cook)
-        if not usr_id:
+        if not self.user_id_for_session_id(cook):
             return False
         del self.user_id_by_session_id[cook]
         return True
