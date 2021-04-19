@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """[summary]"""
 import unittest
-from mock import patch, MagicMock
+from mock import patch, Mock
 from parameterized import parameterized
 from utils import access_nested_map
 
