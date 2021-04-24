@@ -46,7 +46,7 @@ def get_user():
         [type]: [description]
     """
     Id = request.args.get('login_as')
-    if int(Id) and Id in users:
+    if Id and int(Id) in users:
         return users[int(Id)]
     return None
 
@@ -55,10 +55,7 @@ def get_user():
 def before_request():
     """[summary]
     """
-    try:
-        g.user = get_user()
-    except Exception:
-        return None
+    g.user = get_user()
 
 
 @app.route('/')
