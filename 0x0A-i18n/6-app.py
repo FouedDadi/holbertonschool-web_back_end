@@ -21,7 +21,7 @@ class Config:
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
-app.config.from_object('5-app.Config')
+app.config.from_object('6-app.Config')
 
 
 @babel.localeselector
@@ -65,4 +65,4 @@ def before_request():
 def acceuil():
     """[summary]
     """
-    return render_template('5-index.html')
+    return render_template('6-index.html')
