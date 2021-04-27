@@ -4,7 +4,7 @@
 import redis
 from uuid import uuid4
 from typing import Union, Callable, Optional
-
+from sys import byteorder
 
 class Cache():
     """[summary]
@@ -55,4 +55,4 @@ class Cache():
         Returns:
             int: [description]
         """
-        return int.from_bytes(data, sys.byteorder)
+        return int.from_bytes(data, byteorder)
