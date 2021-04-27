@@ -44,7 +44,7 @@ class Cache():
         Returns:
             str: [description]
         """
-        return data.decode()
+        return data.decode("utf-8")
 
     def get_int(self, data: bytes) -> int:
         """[summary]
