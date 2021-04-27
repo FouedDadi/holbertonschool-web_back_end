@@ -56,9 +56,10 @@ def call_history(method: Callable) -> Callable:
         Returns:
             [type]: [description]
         """
+        meth = method(self, *args)
         self._redis.rpush(inp, str(args))
-        self._redis.rpush(out, str(method(self, *args)))
-        return method(self, *args)
+        self._redis.rpush(out, str(meth))
+        return meth
     return wrapper
 
 
