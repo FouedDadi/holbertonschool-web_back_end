@@ -33,6 +33,32 @@ def count_calls(method: Callable) -> Callable:
     return wrapper
 
 
+def call_history(method: Callable):
+    """[summary]
+
+    Returns:
+        [type]: [description]
+    """
+    key = method.__qualname__
+    inp = "".join([key, ":inputs"])
+    out = "".join([key, ":outputs"])
+
+    @wraps(method)
+    def wrapper(self, *args):
+        """[summary]
+
+        Args:
+            method ([type]): [description]
+
+        Returns:
+            [type]: [description]
+        """
+        self._redis.rpush(inp, str(args))
+        self._redis.rpush(out, str(method(self, *args)))
+        return method(self, *args)
+    return wrapper
+
+
 class Cache():
     """[summary]
     """
@@ -41,6 +67,7 @@ class Cache():
         self._redis.flushdb()
 
     @count_calls
+    @call_history
     def store(self, data: Union[str, bytes, int, float]) -> str:
         """[summary]
 
