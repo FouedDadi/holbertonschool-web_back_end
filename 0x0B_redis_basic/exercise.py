@@ -33,11 +33,14 @@ def count_calls(method: Callable) -> Callable:
     return wrapper
 
 
-def call_history(method: Callable):
+def call_history(method: Callable) -> Callable:
     """[summary]
 
+    Args:
+        method (Callable): [description]
+
     Returns:
-        [type]: [description]
+        Callable: [description]
     """
     key = method.__qualname__
     inp = "".join([key, ":inputs"])
