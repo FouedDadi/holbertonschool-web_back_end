@@ -31,7 +31,7 @@ class Cache():
         """[summary]
         """
         data = self._redis.get(key)
-        if data is not None and fn is Not None:
+        if data is not None and fn is not None:
             data = fn(data)
         return data
 
