@@ -12,6 +12,6 @@ def update_topics(mongo_collection, name, topics):
         name ([type]): [description]
         topics ([type]): [description]
     """
-    new_key = {"name": name}
+    filters = {"name": name}
     new_value = {"$set": {"topics": topics}}
-    mongo_collection.update_many(new_key, new_value)
+    mongo_collection.update_many(filters, new_value)
