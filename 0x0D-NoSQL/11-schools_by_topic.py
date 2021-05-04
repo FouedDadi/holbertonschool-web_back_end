@@ -14,6 +14,4 @@ def schools_by_topic(mongo_collection, topic):
     Returns:
         [type]: [description]
     """
-    tpc = []
-    for tpc in mongo_collection.find({"topics": topic}):
-    return tpc
+    return mongo_collection.find({"topics": topic})
