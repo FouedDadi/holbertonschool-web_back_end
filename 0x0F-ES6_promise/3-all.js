@@ -1,9 +1,9 @@
 import { uploadPhoto, createUser } from './utils';
 
 export default function handleProfileSignup() {
-  var body;
-  var firstName;
-  var lastName;
+  let body;
+  let firstName;
+  let lastName;
   return uploadPhoto()
     .then((dt) => {
       body = dt.body;
