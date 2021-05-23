@@ -7,3 +7,4 @@ const app = http.createServer((req, res) => {
   res.end(); // end the response
 });
 app.listen(1245);
+module.exports = app;
