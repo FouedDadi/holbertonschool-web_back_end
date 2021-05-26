@@ -7,8 +7,7 @@ describe('smoke test', function () {
   it('checks output', function () {
     const spy = sinon.spy(utl, 'calculateNumber');
     sendPaymentRequestToApi(100, 20);
-    chai.expect(spy.calledOnce).to.equal(true);
-    chai.expect(spy.calledWith('SUM', 100, 20)).to.equal(true);
+    chai.expect(spy.calledWith('SUM', 100, 20)).to.be.true;
     spy.restore();
   });
 });
