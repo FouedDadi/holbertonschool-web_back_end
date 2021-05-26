@@ -9,11 +9,11 @@ describe('smoke test', function () {
     assert.strictEqual(calculateNumber(1.5, 3.7), 6);
   });
   it('check arguments', function () {
-    assert.strictEqual(isNaN(calculateNumber(1)), true);
     assert.strictEqual(isNaN(calculateNumber()), true);
   });
   it('check negative args', function () {
-    assert.strictEqual(calculateNumber(-2, 4), 2);
-    assert.strictEqual(calculateNumber(-5, -10), -15);
+    assert.strictEqual(calculateNumber(-1, 1), 0);
+    assert.strictEqual(calculateNumber(1, -1), 0);
+    assert.strictEqual(calculateNumber(-1, -1), -2);
   });
 });
