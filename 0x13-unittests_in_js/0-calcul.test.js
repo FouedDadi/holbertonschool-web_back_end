@@ -10,5 +10,10 @@ describe('smoke test', function () {
   });
   it('check arguments', function () {
     assert.strictEqual(isNaN(calculateNumber(1)), true);
+    assert.strictEqual(isNaN(calculateNumber()), true);
+  });
+  it('check negative args', function () {
+    assert.strictEqual(calculateNumber(-2, 4), 2);
+    assert.strictEqual(calculateNumber(-5, -10), -15);
   });
 });
