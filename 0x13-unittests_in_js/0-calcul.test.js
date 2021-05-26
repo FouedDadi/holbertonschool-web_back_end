@@ -7,8 +7,6 @@ describe('smoke test', function () {
     assert.strictEqual(calculateNumber(1, 3.7), 5);
     assert.strictEqual(calculateNumber(1.2, 3.7), 5);
     assert.strictEqual(calculateNumber(1.5, 3.7), 6);
-    assert.strictEqual(calculateNumber(3.7, 1), 5);
-    assert.strictEqual(calculateNumber(3.7, 1.2), 5);
   });
   it('check arguments', function () {
     assert.strictEqual(isNaN(calculateNumber()), true);
