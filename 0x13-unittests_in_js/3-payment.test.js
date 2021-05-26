@@ -4,11 +4,10 @@ const utl = require('./utils.js');
 const chai = require('chai');
 
 describe('smoke test', function () {
-  const spies = sinon.spy(utl, 'calculateNumber');
   it('checks output', function () {
+    const spies = sinon.spy(utl, 'calculateNumber');
     sendPaymentRequestToApi(100, 20);
-    chai.expect(spies.calledOnce).to.be.true;
-    chai.expect(spies.calledWith('SUM', 100, 20)).to.be.true;
+    chai.expect(spies.calledWith('SUM', 100, 20)).to.equal(true);
     spies.restore();
   });
 });
