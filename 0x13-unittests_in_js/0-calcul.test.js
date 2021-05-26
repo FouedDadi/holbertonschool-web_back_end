@@ -7,13 +7,13 @@ describe('smoke test', function () {
     assert.strictEqual(calculateNumber(1, 3.7), 5);
     assert.strictEqual(calculateNumber(1.2, 3.7), 5);
     assert.strictEqual(calculateNumber(1.5, 3.7), 6);
+    assert.strictEqual(calculateNumber(2.4, 4.5), 7);
   });
   it('check arguments', function () {
     assert.strictEqual(isNaN(calculateNumber()), true);
   });
   it('check negative args', function () {
-    assert.strictEqual(calculateNumber(-1, 1), 0);
-    assert.strictEqual(calculateNumber(1, -1), 0);
-    assert.strictEqual(calculateNumber(-1, -1), -2);
+    assert.strictEqual(calculateNumber(-2, 4), 2);
+    assert.strictEqual(calculateNumber(-5, -10), -15);
   });
 });
